@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Horarios</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <nav>
+        <ul>
+            <li><a href="#" id="link-inicio">Inicio</a></li>
+            <li><a href="#" id="link-horarios">Mis Horarios</a></li>
+            <li><a href="#" id="link-materias">Mis Materias</a></li>
+            <li><a href="#" id="link-fechas">Fechas Importantes</a></li>
+        </ul>
+    </nav>
+
+    <!-- Pantalla de Inicio -->
+    <section id="inicio" class="content-section">
+        <div class="banner">
+            <img src="imagenes/153171-OU5TVG-38.jpg" alt="Banner de gestión de horarios">
+            <h1>Bienvenido a tu Gestión de Horarios</h1>
+        </div>
+    </section>
+
+    <!-- Sección Mis Horarios -->
+    <section id="horarios" class="content-section" style="display: none;">
+        <h2>Mis Horarios</h2>
+
+        <button class="btn" id="ver-horarios-btn">Ver Horario</button>
+        
+        <!-- Formulario para agregar nuevas materias -->
+        <div id="formulario-horarios" style="display: none;">
+            <input type="text" id="dia" placeholder="Día de la semana">
+            <input type="text" id="hora" placeholder="Horario (Ej: 7:30 - 9:30)">
+            <input type="text" id="materia" placeholder="Materia">
+            <button id="agregar-horario">Agregar</button>
+        </div>
+
+        <!-- Tabla de horarios -->
+        <table id="tabla-horarios" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Día</th>
+                    <th>Hora</th>
+                    <th>Materia</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Martes</td>
+                    <td>7:30 - 9:30</td>
+                    <td>Anatomía 1</td>
+                    <td><button class="eliminar1">❌</button></td>
+                </tr>
+                <tr>
+                    <td>Martes</td>
+                    <td>9:30 - 11:30</td>
+                    <td>Química Biológica 1</td>
+                    <td><button class="eliminar1">❌</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Sección Mis Materias -->
+    <section id="materias" class="content-section" style="display: none;">
+        <h2>Mis Materias</h2>
+    
+        <!-- Lista principal de materias -->
+        <ul id="lista-materias">
+            <li>
+                Anatomía 1 
+                <button class="aprobar">Aprobada</button>
+                <button class="regular">Regular</button>
+                <button class="promover">Promovida</button>
+                <button class="eliminar2">❌</button>
+            </li>
+            <li>
+                Química Biológica 1 
+                <button class="aprobar">Aprobada</button>
+                <button class="regular">Regular</button>
+                <button class="promover">Promovida</button>
+                <button class="eliminar2">❌</button>
+            </li>
+        </ul>
+    
+        <!-- Secciones separadas para cada estado -->
+        <div class="contenedor-listas">
+            <div>
+                <h3>📘 Aprobada</h3>
+                <ul id="materias-aprobadas"></ul>
+            </div>
+            <div>
+                <h3>📗 Promovida</h3>
+                <ul id="materias-promovidas"></ul>
+            </div>
+            <div>
+                <h3>📙 Regular</h3>
+                <ul id="materias-regulares"></ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Fechas Importantes -->
+    <div id="fechas">
+        <h2>Fechas Importantes</h2>
+        <input type="text" id="materia-fecha" placeholder="Materia">
+        <input type="date" id="nueva-fecha">
+        <button id="agregar-fecha">Agregar Fecha</button>
+        <ul id="lista-fechas"></ul>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
